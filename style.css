@@ -1,0 +1,137 @@
+*{
+    margin: 0;  
+    padding:0;
+}
+body{
+
+}
+nav{
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+   
+}
+nav li{
+    height: 70px;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color:white ;
+}
+nav  ul li:first-child a{
+    text-decoration:none;
+    font-size: 30px;
+    font-weight: 500;
+    
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+.sidebar{
+    position: fixed;
+    top:0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    z-index: 1000;
+    background-color: black;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: .5s ease-out;
+
+}
+.sidebar.active{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.sidebar li:hover{
+    background-color:rgba(63, 63, 63, 0.522) ;
+    width: 100%;
+}
+.sidebar a{
+    
+    width: 100%;
+    text-decoration: none;
+}
+.sidebar a:hover{
+    text-decoration: none;
+}
+.menu-button{
+    
+    display: none;
+    margin-left: auto;
+}
+.founder-img {
+    width: 100%;
+}
+.founder-details{
+    padding-left: 60px;
+}
+.founder-details p{
+    font-size: 25px;
+}
+.container-fluid{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+.footer-content{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-content p{
+    color: aliceblue;
+}
+.footer-content a{
+    margin-top: 10px;
+    text-decoration: none;
+    color: rgb(214, 213, 212);
+}
+.footer-content hr{
+    border:none;
+    height: 2px;
+    width: 100%;
+    background-color: rgb(169, 177, 177);
+}
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-links a{
+    text-decoration: none;
+    color: rgba(240, 248, 255, 0.515);
+}
+.footer-links p{
+    color: rgba(240, 248, 255, 0.515);
+}
+@media(max-width:800px){
+    .hideOnMobile{
+        display: none;
+         transition: 1s ease-out;
+    }
+    .menu-button{
+        display: block;
+    }
+}
